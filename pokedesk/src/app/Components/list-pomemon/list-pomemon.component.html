@@ -1,0 +1,26 @@
+<div class="contenid">
+    <form class="contenid-search" [formGroup]="searchGroup" (ngSubmit)="searchPokemons()">
+        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" >
+        <div class="searchContend">
+            <input type="text search" class="searchInput" formControlName = "searchInput" placeholder="search Pokemon">
+        </div>
+    </form>
+    <div
+      class="contenid-pokemon"
+      *ngFor="let pokemon of pokenShow"
+    >
+    <img
+    class="img"
+    [src]="pokemon.sprites.other.dream_world.front_default"
+    alt="pokemon"
+    />
+    <div class="text-button">
+        <h3 class="text text-center">
+          {{ pokemon.name }}
+        </h3>
+        <button class="button btn " (click)="detailPokemon(pokemon.id)">
+            estadisticas
+        </button>
+    </div>
+    </div>
+</div>

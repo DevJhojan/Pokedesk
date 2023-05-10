@@ -1,0 +1,14 @@
+.contenid{
+    width: 99%;
+    height: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    justify-content: center;
+    overflow: hidden scroll;
+    scrollbar-width:none ;
+
+  border: 3px solid red;
+    background-color: rgb(58, 57, 57);
+}
