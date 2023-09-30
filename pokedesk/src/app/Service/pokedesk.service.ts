@@ -1,15 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, share } from 'rxjs';
-import { Pokemon } from 'src/Models/pokemon.model';
-
+import { Observable } from 'rxjs';
 const basePokemon = 'https://pokeapi.co/api/v2/pokemon';
-
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class PokemonService {
-  pokemons: any;
+export class PokedeskService {
+ pokemons: any;
 
   constructor(private http: HttpClient) {}
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounce, debounceTime, map } from 'rxjs';
-import { PokemonService } from 'src/app/Service/pokemon.service';
+import { PokedeskService } from 'src/app/Service/pokedesk.service';
 const pokemon_count = 1281;
 @Component({
   selector: 'app-list-pomemon',
@@ -12,10 +12,11 @@ const pokemon_count = 1281;
 export class ListPomemonComponent implements OnInit {
   pokemons: any[] = [];
   pokenShow: any[] = [];
-  name: string;
-  searchGroup: FormGroup;
-  constructor(private poken: PokemonService, private router: Router) {
+  name!: string;
+  searchGroup!: FormGroup;
+  constructor(private poken: PokedeskService, private router: Router) {
     this.getPokemons();
+
   }
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class ListPomemonComponent implements OnInit {
   }
 
   searchPokemons() {
-    
+
     try {
       this.searchGroup.valueChanges
       .pipe(debounceTime(1000))
@@ -58,9 +59,11 @@ export class ListPomemonComponent implements OnInit {
     for (let i = 1; i <= pokemon_count; i++) {
       this.poken.getPokemon(i).subscribe((data: any) => {
         this.pokemons.push(data);
+        console.log(data);
       });
     }
     this.pokenShow = this.pokemons;
+
   }
   detailPokemon(index: number) {
     this.router.navigate([`/home/pokemonDetail/${index}`]);

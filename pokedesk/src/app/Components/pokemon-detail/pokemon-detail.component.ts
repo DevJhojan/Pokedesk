@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PokemonService } from 'src/app/Service/pokemon.service';
-
+import { PokedeskService } from 'src/app/Service/pokedesk.service';
 @Component({
   selector: 'app-pokemon-detail',
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.scss'],
 })
 export class PokemonDetailComponent implements OnInit {
-  name: string;
-  id: number;
-  img: string;
+  name!: string;
+  id!: number;
+  img!: string;
   abilities: any[] = [];
-  experience: number;
+  experience!: number;
   stats: any[] = [];
 
   constructor(
     private router: Router,
     private activeRouter: ActivatedRoute,
-    private pokeServi: PokemonService
+    private pokeServi:PokedeskService
   ) {}
 
   ngOnInit(): void {
@@ -34,5 +33,5 @@ export class PokemonDetailComponent implements OnInit {
       });
     });
   }
-  
+
 }
