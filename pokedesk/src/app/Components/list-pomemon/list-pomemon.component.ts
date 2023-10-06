@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounce, debounceTime, map } from 'rxjs';
-import { IPokemonModel } from 'src/Models/pokemon.model';
+import { IPokemonModel } from 'src/app/Models/pokemon.model';
 import { PokedeskService } from 'src/app/Service/pokedesk.service';
 const pokemon_count = 100;
 @Component({
@@ -19,22 +19,22 @@ export class ListPomemonComponent implements OnInit {
     this.getPokemons();
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   searchPokemons(e: Event) {
-    setTimeout(()=>{
+    setTimeout(() => {
       const filtro = (e.target as HTMLInputElement).value;
-      if(filtro.length === 0){
+      if (filtro.length === 0) {
         this.getPokemons();
-      }else{
-        let pokemons: IPokemonModel[] = this.pokenShow.filter((pokemon)=> pokemon.name.toLowerCase().includes(filtro.toLowerCase()));
-        this.pokenShow = []
-        this.pokenShow= pokemons;
-        console.log(this.pokenShow)
+      } else {
+        let pokemons: IPokemonModel[] = this.pokenShow.filter((pokemon) =>
+          pokemon.name.toLowerCase().includes(filtro.toLowerCase())
+        );
+        this.pokenShow = [];
+        this.pokenShow = pokemons;
+        console.log(this.pokenShow);
       }
-  },500)
+    }, 500);
   }
 
   getPokemons() {
@@ -46,7 +46,6 @@ export class ListPomemonComponent implements OnInit {
       });
     }
     this.pokenShow = this.pokemons;
-
   }
 
   detailPokemon(index: number) {

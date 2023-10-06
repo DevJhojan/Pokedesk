@@ -26,6 +26,7 @@ export interface IPokemonModel{
   height: number;
   held_items: any[];
   id: number;
+  base_experience: number;
   is_default: boolean;
   location_area_encounters: string;
   moves: IMovesModel[];

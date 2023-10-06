@@ -1,47 +1,42 @@
-<div class="contenid">
-  <a routerLink="" class="btn button">x</a>
-  <div class="pokemon-detail">
-    <h4 class="name-pokemon">{{ this.name }}</h4>
-    <div class="experience">
-      <label class="title"> Experiencia </label>
-      <div class="porcen-bar">
-        <mat-progress-bar
-          mode="determinate"
-          class="mat-progress-bar"
-          [value]="this.experience"
-           
-        ></mat-progress-bar>
-        <label class="porcent"> {{ this.experience }}</label>
+<button routerLink="" class="btn button">x</button>
+<main>
+  <article class="pokemon-detail">
+    <img class="img" [src]="this.img" alt="img" />
+    <div class="contenid">
+      <h3 class="name-pokemon">{{ this.name |uppercase}}</h3>
+      <div class="experience">
+        <label class="title"> Experiencia </label>
+        <div class="porcen-bar">
+          <mat-progress-bar
+            mode="determinate"
+            class="mat-progress-bar"
+            [value]="this.experience"
+          ></mat-progress-bar>
+          <label class="porcent"> {{ this.experience }}</label>
+      </div>
+      <div class="all-habilities">
+        <nav class="stats">
+          <ul>
+            <li class="stat" *ngFor="let stat of stats">
+              <label class="name">
+                {{ stat.stat.name }} :
+              {{ stat.base_stat }} </label>
+
+            </li>
+          </ul>
+        </nav>
+        <div class="habilities">
+          <h5 class="titleability"> abilidades:</h5>
+          <nav class="hability">
+            <ul>
+              <li class="abilty-list" *ngFor="let ability of abilities">
+                <label class="abilityName"> | {{ ability.ability.name }} </label>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       </div>
     </div>
-
-    <div class="contentImg">
-      <img class="img" [src]="this.img" alt="img" />
-    </div>
-    <div class="stats">
-      <ul>
-        <li class="stat" *ngFor="let stat of stats">
-          <label class="name">
-            {{ stat.stat.name }}
-          </label>
-          <div class="porcen-bar">
-            <mat-progress-bar
-              class="mat-progress-bar"
-              mode="determinate"
-              [value]="stat.base_stat"
-            ></mat-progress-bar>
-            <label class="porcen"> {{ stat.base_stat }} </label>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="hability">
-      <h6 class="titleability">Sus abilidades son:</h6>
-      <ul>
-        <li class="abilty-list" *ngFor="let ability of abilities">
-          <label class="abilityName"> | {{ ability.ability.name }} </label>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+  </article>
+</main>
