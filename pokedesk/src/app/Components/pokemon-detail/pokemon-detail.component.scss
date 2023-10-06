@@ -8,11 +8,11 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  width: 90%;
-  height: 90%;
+  width: 100%;
   justify-content: center;
   .img {
     width: 15rem;
+    padding: 2rem;
   }
   .contenid {
     width: 90%;
@@ -29,14 +29,13 @@
       flex-wrap: nowrap;
       flex-direction: row;
       .stats{
-        width: 100%;
         padding: 1rem;
+        margin-left: 1rem;
         .stat{
           list-style: none;
         }
       }
       .habilities{
-        width: 100%;
       }
     }
   }
