@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pokedesk'`, () => {
+  it(`should have as title 'pokedesk-v2'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pokedesk');
+    expect(app.title).toEqual('pokedesk-v2');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pokedesk app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('pokedesk-v2 app is running!');
   });
 });
