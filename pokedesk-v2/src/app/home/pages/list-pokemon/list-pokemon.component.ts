@@ -18,7 +18,7 @@ export class ListPokemonComponent implements AfterViewInit {
       console.log(list);
       this.pokemons_names = list.results;
     });
-    console.log(this.pokemons_names);
+    
   }
   downLoad(): void {
     this.downloadService.downloadExcel(this.pokemons_names);
