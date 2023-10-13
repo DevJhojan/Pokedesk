@@ -24,6 +24,7 @@ const routes: Routes = [
         path: 'pokemon/:id',
         component: PokemonDetailComponent,
       },
+      
       {
         path: '**',
         redirectTo: 'list',
