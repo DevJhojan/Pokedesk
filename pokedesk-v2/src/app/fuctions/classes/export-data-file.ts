@@ -43,33 +43,42 @@ export class ExportDataFile {
     let paper: any;
     let sheet: string;
     if (number_paper) {
+      /**
+       *  ! CADA PAGINA TIENE SUS PROPIOS DATOS
+       *  ! CADA UNO DE LOS ES IGUAL COMO SE DIGITA  "ELSE" DE ESTE MISMO CONDICIONAL
+       *  Si esta condición se va a utilizar
+       *  es recomendable que se cree un metodo
+       * y este reciba los respetivos datos a modificar o cambiar,
+       * probablemente funcione bien con un swith, para así no hacer tanto condicional
+       * */
       for (let i = 0; i < number_paper; i++) {
         sheet = 'Hoja ' + i;
         paper = this._workbook.addWorksheet(sheet);
+
       }
     } else {
       paper = this._workbook.addWorksheet('Hoja X');
+      //** EL HEADER.COLUM SOLO RECIBE LETRAS EN MAYUSCULAS */
+      columns.forEach((header) => {
+        paper.getColumn(header.column).width = header.width;
+      });
+      paper.columns.forEach((column: any) => {
+        column.alignment = { vertical: 'middle', wrapText: true };
+      });
+      const header_row = paper.getRow(1);
+
+      header_row.values = header_names;
+
+      header_row.font = { bold: true, size: 12 };
+
+      const data_rows = paper.getRows(2, data_table.length)!;
+
+      for (let i = 0; i < data_rows.length; i++) {
+        const item = data_table[i];
+        const row = data_rows[i];
+        row.values = [item.name, item.url];
+      }
     }
 
-    //** EL HEADER.COLUM SOLO RECIBE LETRAS EN MAYUSCULAS */
-    columns.forEach((header) => {
-      paper.getColumn(header.column).width = header.width;
-    });
-    paper.columns.forEach((column: any) => {
-      column.alignment = { vertical: 'middle', wrapText: true };
-    });
-    const header_row = paper.getRow(1);
-
-    header_row.values = header_names;
-
-    header_row.font = { bold: true, size: 12 };
-
-    const data_rows = paper.getRows(2, data_table.length)!;
-
-    for (let i = 0; i < data_rows.length; i++) {
-      const item = data_table[i];
-      const row = data_rows[i];
-      row.values = [item.name, item.url];
-    }
   }
 }

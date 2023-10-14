@@ -37,7 +37,7 @@ export class ListPokemonComponent implements AfterViewInit {
       this.pokemons_names,
       this.columns,
       this.header_names,
-      'pokemons.xlsx'
+      'pokemons.xlsx',
     );
   }
   ngAfterViewInit(): void {}
