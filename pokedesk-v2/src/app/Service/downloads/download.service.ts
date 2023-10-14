@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Workbook } from 'exceljs';
 import { IEntityModel } from 'src/app/Models/i-entity.model';
 import * as fs from 'file-saver';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -21,6 +22,8 @@ export class DownloadService {
       const blob = new Blob([data]);
       fs.saveAs(blob, 'pokemons.xlsx');
     });
+
+
   }
 
   private _createPokemonTable(data_table: IEntityModel[]): void {
@@ -32,17 +35,6 @@ export class DownloadService {
     pokemons_paper.columns.forEach((column)=>{
       column.alignment = {vertical: 'middle', wrapText: true}
     })
-
-    //* Agregación de titulos
-/*
-    const title_one = pokemons_paper.getCell('A1');
-    const title_two = pokemons_paper.getCell('B1');
-
-    title_one.value = 'NAME';
-    title_two.value = 'URL';
-    title_one.style.font = {bold: true}
-    title_two.style.font = {bold: true} */
-
     const header_row = pokemons_paper.getRow(1);
     header_row.values = ['Name','URL']
     header_row.font = {bold:true, size:14}

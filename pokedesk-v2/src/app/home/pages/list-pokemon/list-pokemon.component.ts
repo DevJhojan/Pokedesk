@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { IEntityModel } from 'src/app/Models/i-entity.model';
+import { EntityModel, IEntityModel } from 'src/app/Models/i-entity.model';
 import { DownloadService, PokemonService } from 'src/app/Service';
-
+import { Workbook } from 'exceljs';
+import { ImportExcel, removeDuplicateData } from 'src/app/fuctions';
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
@@ -9,19 +10,43 @@ import { DownloadService, PokemonService } from 'src/app/Service';
 })
 export class ListPokemonComponent implements AfterViewInit {
   pokemons_names!: IEntityModel[];
-  colums: string[] = ['name', 'url'];
+  pokemons_import: EntityModel[] = [];
+  row_data: any[] = [];
+  pokemon_select_file!: EntityModel;
+  file_pokemon: any;
+  importExcel: ImportExcel = new ImportExcel();
   constructor(
     private pokemonService: PokemonService,
     private downloadService: DownloadService
   ) {
     this.pokemonService.getAllPokemons().subscribe((list) => {
-      console.log(list);
       this.pokemons_names = list.results;
     });
-    
   }
   downLoad(): void {
     this.downloadService.downloadExcel(this.pokemons_names);
   }
   ngAfterViewInit(): void {}
+
+  async selectFile($event: any) {
+    let arrays_promise = this.importExcel.file_selected($event);
+
+    let data_rows = await arrays_promise;
+
+    let name: string;
+    let url: string;
+    data_rows.map((cell) => {
+      if (cell.address.includes('A')) {
+        name = cell.value;
+      }
+      if (cell.address.includes('B')) {
+        url = cell.value;
+      }
+      if (name && url) {
+        this.pokemon_select_file = new EntityModel(name, url);
+        this.pokemons_import.push(this.pokemon_select_file);
+        url = '';
+      }
+    });
+  }
 }

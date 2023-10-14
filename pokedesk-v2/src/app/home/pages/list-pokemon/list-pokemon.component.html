@@ -1,4 +1,6 @@
 <main>
+  <hr>
+  <h1>para exportar</h1>
   <table [cellPadding]="2">
     <tr>
       <th>name</th>
@@ -10,4 +12,17 @@
     </tr>
   </table>
   <button (click)="downLoad()">exportar</button>
+  <hr>
+  <h1>para importar</h1>
+  <table [cellPadding]="2">
+    <tr>
+      <th>name</th>
+      <th>url</th>
+    </tr>
+    <tr *ngFor="let pokemon of pokemons_import">
+      <td>{{pokemon.name}}</td>
+      <td>{{pokemon.url}}</td>
+    </tr>
+  </table>
+  <input title="import" type="file" (change)="selectFile($event)" accept=".xlsx"/>
 </main>
