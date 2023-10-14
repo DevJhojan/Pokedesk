@@ -22,8 +22,6 @@ export class DownloadService {
       const blob = new Blob([data]);
       fs.saveAs(blob, 'pokemons.xlsx');
     });
-
-
   }
 
   private _createPokemonTable(data_table: IEntityModel[]): void {
