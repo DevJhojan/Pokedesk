@@ -4,7 +4,7 @@ import { DownloadService, PokemonService } from 'src/app/Service';
 import { Workbook } from 'exceljs';
 import { ImportExcel, removeDuplicateData } from 'src/app/fuctions';
 import { ExportDataFile } from '../../../fuctions/classes/export-data-file';
-import { IColumns } from 'src/app/fuctions/interfaces/i-headers.interface';
+import { IColumns } from 'src/app/fuctions/interfaces/i-columns.interface';
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
@@ -22,7 +22,7 @@ export class ListPokemonComponent implements AfterViewInit {
     { column: 'A', width: 10 },
     { column: 'B', width: 50 },
   ];
-  header_names: string[] =['NAMES', 'URLS']
+  header_names: string[] = ['NAMES', 'URLS'];
   constructor(
     private pokemonService: PokemonService,
     private downloadService: DownloadService
@@ -37,7 +37,7 @@ export class ListPokemonComponent implements AfterViewInit {
       this.pokemons_names,
       this.columns,
       this.header_names,
-      'pokemons.xlsx',
+      'pokemons.xlsx'
     );
   }
   ngAfterViewInit(): void {}

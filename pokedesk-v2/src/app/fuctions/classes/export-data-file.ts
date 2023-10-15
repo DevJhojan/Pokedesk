@@ -1,6 +1,7 @@
 import { Workbook } from 'exceljs';
-import { IColumns } from '../interfaces/i-headers.interface';
+
 import * as fs from 'file-saver';
+import { IColumns } from '../interfaces/i-columns.interface';
 
 //versión 1
 
