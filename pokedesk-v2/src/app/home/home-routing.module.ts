@@ -21,10 +21,10 @@ const routes: Routes = [
         component: SearchPokemonComponent,
       },
       {
-        path: 'pokemon/:id',
+        path: 'pokemon/:name',
         component: PokemonDetailComponent,
       },
-      
+
       {
         path: '**',
         redirectTo: 'list',

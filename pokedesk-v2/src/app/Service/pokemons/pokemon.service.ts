@@ -17,11 +17,11 @@ export class PokemonService {
     return this.http.get<IListModel>(`${list_pokemons}`, requestOptions);
   }
 
-  getPokemon(id: number): Observable<IPokemonModel> {
+  getPokemon(name: string): Observable<IPokemonModel> {
     const headers = new HttpHeaders({ Authorization: 'Bearer ' });
     const requestOptions = { headers: headers };
     return this.http.get<IPokemonModel>(
-      `${detail_pokemon}/${id}`,
+      `${detail_pokemon}/${name}`,
       requestOptions
     );
   }

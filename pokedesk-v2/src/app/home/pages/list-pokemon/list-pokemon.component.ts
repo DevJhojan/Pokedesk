@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { EntityModel, IEntityModel } from 'src/app/Models/i-entity.model';
-import { DownloadService, PokemonService } from 'src/app/Service';
+import { PokemonService } from 'src/app/Service';
 import { Workbook } from 'exceljs';
 import { ImportExcel, removeDuplicateData } from 'src/app/fuctions';
 import { ExportDataFile } from '../../../fuctions/classes/export-data-file';
 import { IColumns } from 'src/app/fuctions/interfaces/i-columns.interface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
@@ -22,10 +23,13 @@ export class ListPokemonComponent implements AfterViewInit {
     { column: 'A', width: 10 },
     { column: 'B', width: 50 },
   ];
+
+  pok: number= 0;
+
   header_names: string[] = ['NAMES', 'URLS'];
   constructor(
     private pokemonService: PokemonService,
-    private downloadService: DownloadService
+    private router: Router,
   ) {
     this.pokemonService.getAllPokemons().subscribe((list) => {
       this.pokemons_names = list.results;
@@ -62,5 +66,9 @@ export class ListPokemonComponent implements AfterViewInit {
         url = '';
       }
     });
+  }
+
+  detail_pokemon(name: string){
+    this.router.navigate([`pokedesk/pokemon/${name}`])
   }
 }

@@ -8,7 +8,11 @@
     </tr>
     <tr *ngFor="let pokemon of pokemons_names">
       <td>{{pokemon.name}}</td>
-      <td>{{pokemon.url}}</td>
+      <td>
+        <button (click)="detail_pokemon(pokemon.name)" >
+          Caracteristicas
+        </button>
+      </td>
     </tr>
   </table>
   <button (click)="downLoad()">exportar</button>
@@ -21,7 +25,9 @@
     </tr>
     <tr *ngFor="let pokemon of pokemons_import">
       <td>{{pokemon.name}}</td>
-      <td>{{pokemon.url}}</td>
+      <td>
+          {{pokemon.url}}
+      </td>
     </tr>
   </table>
   <input title="import" type="file" (change)="selectFile($event)" accept=".xlsx"/>

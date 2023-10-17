@@ -1,1 +1,8 @@
-<p>pokemon-detail works!</p>
+<article>
+  <ngx-charts-pie-grid
+    [view]="view"
+    [scheme]="colors"
+    [results]="this.abilities_pokemon"
+    (select)="onSelect($event)">
+  </ngx-charts-pie-grid>
+</article>
