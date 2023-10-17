@@ -14,7 +14,7 @@ interface ICake{
   templateUrl: './pokemon-detail.component.html',
   styles: [],
 })
-export class PokemonDetailComponent implements OnInit{
+export class PokemonDetailComponent {
   name!: string;
   pokemon?: IPokemonModel;
   view: [number, number] = [500, 400];
@@ -39,7 +39,6 @@ export class PokemonDetailComponent implements OnInit{
       this.stats = this.stats_pokemon;
     });
   }
-  ngOnInit(): void {
-  }
+
   onSelect($event: any) {}
 }
