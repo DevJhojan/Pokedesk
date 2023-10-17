@@ -4,20 +4,6 @@ import { IMovesModel } from "./i-moves.model";
 import { ISpritesModel } from "./i-sprites.model";
 import { IStatModel } from "./i-stats.model";
 import { ITypeModel } from "./i-type.model";
-
-export class Pokemon{
-    id: number;
-    sprite: string;
-    name: string;
-
-    constructor({ cId=0, cName = '', cStripe = '' }: {cId?:number, cName?: string; cStripe?: string; } = {}){
-        this.id = cId;
-        this.name = cName;
-        this.sprite = cStripe;
-    }
-}
-
-
 export interface IPokemonModel{
   abilities: IAbilitiesModel[];
   base_exprience: number;

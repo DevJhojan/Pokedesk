@@ -1,8 +1,11 @@
 <article>
   <ngx-charts-pie-grid
     [view]="view"
+
     [scheme]="colors"
-    [results]="this.abilities_pokemon"
+
+    [results]="stats"
+
     (select)="onSelect($event)">
   </ngx-charts-pie-grid>
 </article>
