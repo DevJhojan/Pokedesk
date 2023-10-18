@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent, LoginComponent, SingupComponent } from './pages';
+import { LoginComponent, SingupComponent } from './pages';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { PagesAuthComponent } from '../layouts';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    component: PagesAuthComponent,
     children:[
       {
         path: 'login', component: LoginComponent,
