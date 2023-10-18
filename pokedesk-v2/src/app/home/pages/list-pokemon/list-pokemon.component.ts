@@ -1,8 +1,7 @@
 import { AfterViewInit, Component} from '@angular/core';
 import { EntityModel, IEntityModel } from 'src/app/Models/i-entity.model';
 import { PokemonService } from 'src/app/Service';
-import { ImportExcel } from 'src/app/fuctions';
-import { ExportDataFile } from '../../../fuctions/classes/export-data-file';
+import { ExportDataFile, ImportExcel } from 'src/app/fuctions';
 import { IColumns } from 'src/app/fuctions/interfaces/i-columns.interface';
 import { Router } from '@angular/router';
 @Component({
