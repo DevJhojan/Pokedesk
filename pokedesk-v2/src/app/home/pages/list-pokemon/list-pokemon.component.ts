@@ -4,13 +4,15 @@ import { PokemonService } from 'src/app/Service';
 import { ExportDataFile, ImportExcel } from 'src/app/fuctions';
 import { IColumns } from 'src/app/fuctions/interfaces/i-columns.interface';
 import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
   styles: [],
 })
 export class ListPokemonComponent implements AfterViewInit {
-  pokemons_names!: IEntityModel[];
+  pokemonsNames: IEntityModel[] = [];
+  pokemonSource: any;//?muestra los pokemons en la tabla //!se deja en any para posible actualización de angualar
   pokemons_import: EntityModel[] = [];
   row_data: any[] = [];
   pokemon_select_file!: EntityModel;
@@ -24,21 +26,27 @@ export class ListPokemonComponent implements AfterViewInit {
 
   pok: number= 0;
 
-  header_names: string[] = ['NAMES', 'URLS'];
+  headerNames: string[] = ['NAME', 'URL'];
   constructor(
     private pokemonService: PokemonService,
     private router: Router,
   ) {
-    this.pokemonService.getAllPokemons().subscribe((list) => {
-      this.pokemons_names = list.results;
-    });
+    this.getPokemons()
+  }
+  getPokemons(){
+    setTimeout(()=>{
+      this.pokemonService.getAllPokemons().subscribe((list) => {
+        this.pokemonsNames = list.results;
+        this.pokemonSource = new MatTableDataSource(list.results);
+      });
+    },200)
   }
   downLoad(): void {
     /* this.downloadService.downloadExcel(this.pokemons_names); */
     this.exportDataFile.downloadFile(
-      this.pokemons_names,
+      this.pokemonsNames,
       this.columns,
-      this.header_names,
+      this.headerNames,
       'pokemons.xlsx'
     );
   }
@@ -65,7 +73,10 @@ export class ListPokemonComponent implements AfterViewInit {
       }
     });
   }
-
+  buscarPokemon($event: Event){
+    const filter = ($event.target as HTMLInputElement).value;
+    this.pokemonSource.filter = filter.trim().toLowerCase();
+  }
   detail_pokemon(name: string){
     this.router.navigate([`pokedesk/pokemon/${name}`])
   }
