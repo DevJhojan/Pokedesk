@@ -1,44 +1,30 @@
 <main>
+  <h1>para exportar</h1>
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="buscarPokemon($event)" placeholder="Ex. ium" #input>
   </mat-form-field>
-  <table mat-table [dataSource]="pokemonSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="NAME">
-      <th mat-header-cell *matHeaderCellDef> NAME </th>
-      <td mat-cell *matCellDef="let pokemon">{{pokemon.name}}</td>
-    </ng-container>
-    <ng-container matColumnDef="URL">
-      <th mat-header-cell *matHeaderCellDef>URL</th>
-      <td mat-cell *matCellDef="let pokemon">
-        <button mat-flat-button (click)="detail_pokemon(pokemon.name)">
-          {{pokemon.url}}
-        </button>
-      </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="headerNames"></tr>
-    <tr mat-row *matRowDef="let row; columns: headerNames"></tr>
-    <tr class="mat-row" *matNoDataRow="">
-      <td class="mat-cell" colspan="4">No se encontro {{input.value}}</td>
-    </tr>
-  </table>
-  <hr>
-  <h1>para exportar</h1>
-  <table [cellPadding]="2">
-    <tr>
-      <th>name</th>
-      <th>url</th>
-    </tr>
-    <tr *ngFor="let pokemon of pokemonsNames">
-      <td>{{pokemon.name}}</td>
-      <td>
-        <button (click)="detail_pokemon(pokemon.name)" >
-          Caracteristicas
-        </button>
-      </td>
-    </tr>
-  </table>
-  <button (click)="downLoad()">exportar</button>
+
+    <table mat-table [dataSource]="pokemonSource"  class="mat-elevation-z8">
+      <ng-container matColumnDef="NAME">
+        <th mat-header-cell *matHeaderCellDef> NAME </th>
+        <td mat-cell *matCellDef="let pokemon">{{pokemon.name}}</td>
+      </ng-container>
+      <ng-container matColumnDef="URL">
+        <th mat-header-cell *matHeaderCellDef>URL</th>
+        <td mat-cell *matCellDef="let pokemon">
+          <button mat-flat-button (click)="detail_pokemon(pokemon.name)">
+            {{pokemon.url}}
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="headerNames"></tr>
+      <tr mat-row *matRowDef="let row; columns: headerNames"></tr>
+      <tr class="mat-row" *matNoDataRow="">
+        <td class="mat-cell" colspan="4">No se encontro {{input.value}}</td>
+      </tr>
+    </table>
+    <button mat-raised-button color="warn" (click)="downLoad()">exportar</button>
   <hr>
   <h1>para importar</h1>
   <table [cellPadding]="2">
