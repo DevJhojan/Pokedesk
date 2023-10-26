@@ -3,8 +3,6 @@ import { Workbook } from 'exceljs';
 import * as fs from 'file-saver';
 import { IColumns } from '../interfaces/i-columns.interface';
 
-//versión 1
-
 export class ExportDataFile {
   private _workbook: Workbook = new Workbook();
   constructor() {}
@@ -42,11 +40,9 @@ export class ExportDataFile {
     let paper: any;
     let sheet: string;
     if (number_paper) {
-      
       for (let i = 0; i < number_paper; i++) {
         sheet = 'Hoja ' + i;
         paper = this._workbook.addWorksheet(sheet);
-        //! AQUI SIGUE EL CODIGO
         //** EL HEADER.COLUM SOLO RECIBE LETRAS EN MAYUSCULAS */
         columns.forEach((header) => {
           paper.getColumn(header.column).width = header.width;
@@ -68,6 +64,7 @@ export class ExportDataFile {
           row.values = [item.name, item.url];
         }
       }
+      sheet = ""
     }
 
   }
