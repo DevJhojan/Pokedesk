@@ -1,10 +1,10 @@
 //*modulos
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -34,8 +34,7 @@ import { PokemonService } from '../Service';
     ScrollingModule,
     CdkTableModule,
   ],
-  providers:[
-    PokemonService,
-  ]
+  providers: [PokemonService],
+  schemas: [NO_ERRORS_SCHEMA]
 })
-export class HomeModule { }
+export class HomeModule {}

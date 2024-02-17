@@ -28,7 +28,7 @@ export class ListPokemonComponent implements OnInit, AfterViewInit {
   ];
   viewport!: CdkVirtualScrollViewport
 
-  headerNames: string[] = ['NAME', 'URL'];
+  headerNames: string[] = ['NAME', 'Detail'];
   constructor(
     private pokemonService: PokemonService,
     private router: Router,

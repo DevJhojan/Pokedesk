@@ -1,11 +1,10 @@
-<article>
+<article class="detail">
+  <img [src]="pokemon?.sprites?.other.dream_world.front_default" [alt]="pokemon?.name" />
   <ngx-charts-pie-grid
     [view]="view"
-
     [scheme]="colors"
-
     [results]="stats"
-
-    (select)="onSelect($event)">
+    (select)="onSelect($event)"
+  >
   </ngx-charts-pie-grid>
 </article>
