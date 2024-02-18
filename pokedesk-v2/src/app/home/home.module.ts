@@ -12,8 +12,6 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 //*componentes
 import { PokemonDetailComponent } from './pages/pokemon-detail/pokemon-detail.component';
-
-import { ListPokemonComponent } from './pages/list-pokemon/list-pokemon.component';
 import { SearchPokemonComponent } from './pages/search-pokemon/search-pokemon.component';
 import { PokemonService } from '../Service';
 import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.component';
@@ -21,7 +19,6 @@ import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.compo
 @NgModule({
   declarations: [
     PokemonDetailComponent,
-    ListPokemonComponent,
     SearchPokemonComponent,
     PokemonFrontComponent
   ],
