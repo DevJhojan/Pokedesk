@@ -16,12 +16,14 @@ import { PokemonDetailComponent } from './pages/pokemon-detail/pokemon-detail.co
 import { ListPokemonComponent } from './pages/list-pokemon/list-pokemon.component';
 import { SearchPokemonComponent } from './pages/search-pokemon/search-pokemon.component';
 import { PokemonService } from '../Service';
+import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.component';
 
 @NgModule({
   declarations: [
     PokemonDetailComponent,
     ListPokemonComponent,
     SearchPokemonComponent,
+    PokemonFrontComponent
   ],
   imports: [
     CommonModule,

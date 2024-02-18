@@ -33,6 +33,12 @@
       ],
       "@share/*":[
         "src/app/shared"
+      ],
+      "@assets/*":[
+        "src/assets"
+      ],
+      "@func/*":[
+        "src/assets/func"
       ]
     }
   },

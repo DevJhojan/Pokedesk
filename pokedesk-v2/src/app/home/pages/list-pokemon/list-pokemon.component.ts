@@ -1,8 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { EntityModel, IEntityModel } from 'src/app/Models/i-entity.model';
 import { PokemonService } from 'src/app/Service';
-import { ExportDataFile, ImportExcel } from 'src/app/fuctions';
-import { IColumns } from 'src/app/fuctions/interfaces/i-columns.interface';
+import { IColumns,ExportDataFile, ImportExcel } from '@func/*';
 import { Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';

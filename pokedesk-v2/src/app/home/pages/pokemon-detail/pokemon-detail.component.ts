@@ -1,8 +1,8 @@
 import { IPokemonModel } from 'src/app/Models';
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { PokemonService } from 'src/app/Service';
-import { colorSheme } from 'src/app/fuctions';
+import { colorSheme } from '@func/*';
 
 interface ICake {
   name: string;

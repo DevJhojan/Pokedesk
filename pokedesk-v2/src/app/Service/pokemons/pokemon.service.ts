@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { IListModel } from '../../Models/i-list.model';
 import { IPokemonModel } from '../../Models/pokemon.model';
 const detail_pokemon = 'https://pokeapi.co/api/v2/pokemon';
-const list_pokemons = 'https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0/';
+const list_pokemons = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=0/';
 @Injectable({
   providedIn: 'root',
 })
@@ -25,9 +25,12 @@ export class PokemonService {
       requestOptions
     );
   }
-  getSearchPokemon(search: string) {
+  getSearchPokemon(search: string): Observable<IPokemonModel> {
     const headers = new HttpHeaders({ Authorization: 'Bearer ' });
     const requestOptions = { headers: headers };
-    return this.http.get(`${detail_pokemon}/${search}`, requestOptions);
+    return this.http.get<IPokemonModel>(
+      `${detail_pokemon}/${search}`,
+      requestOptions
+    );
   }
 }

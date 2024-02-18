@@ -71,3 +71,66 @@ table {
 ::ng-deep .ngx-charts .grid-panel .label {
   fill: white;
 }
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-list {
+  width: 70%;
+}
+.article-list {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgb(46, 45, 45);
+  border-radius: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 15%;
+  height: 10%;
+}
+
+.detail-list {
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  img {
+    width: 35%;
+    padding: 1rem;
+  }
+}
+.searchContend {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .searchInput {
+    border-color: red;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 90%;
+    color: white;
+    background-color: black;
+    margin: auto;
+    text-align: center;
+  }
+}
+.logo-pokemon {
+  margin: auto;
+  width: 20%;
+}
+
+.button-list {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: orange;
+  color: white;
+  margin-top: 1rem;
+}
