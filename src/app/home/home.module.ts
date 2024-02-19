@@ -20,7 +20,7 @@ import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.compo
   declarations: [
     PokemonDetailComponent,
     SearchPokemonComponent,
-    PokemonFrontComponent
+    PokemonFrontComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +34,6 @@ import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.compo
     CdkTableModule,
   ],
   providers: [PokemonService],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class HomeModule {}

@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent, SingupComponent } from './pages';
+import { LoginComponent, SingupComponent } from '.';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PagesAuthComponent } from '../layouts';
-
 
 const routes: Routes = [
   {
     path: '',
     component: PagesAuthComponent,
-    children:[
+    children: [
       {
-        path: 'login', component: LoginComponent,
+        path: 'login',
+        component: LoginComponent,
       },
-      {path: 'singup', component: SingupComponent},
-      {path: '**', redirectTo: 'login'}
-    ]
-  }
+      { path: 'singup', component: SingupComponent },
+      { path: '**', redirectTo: 'login' },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

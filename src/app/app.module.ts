@@ -14,11 +14,7 @@ import { PagesHomeComponent } from './layouts/pages-home/pages-home.component';
 import { PagesAuthComponent } from './layouts/pages-auth/pages-auth.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PagesHomeComponent,
-    PagesAuthComponent
-  ],
+  declarations: [AppComponent, PagesHomeComponent, PagesAuthComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,9 +25,9 @@ import { PagesAuthComponent } from './layouts/pages-auth/pages-auth.component';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    NgxChartsModule
+    NgxChartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

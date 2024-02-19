@@ -8,7 +8,6 @@ const routes: Routes = [
     path: '',
     component: PagesHomeComponent,
     children: [
-
       {
         path: 'search',
         component: SearchPokemonComponent,
@@ -21,14 +20,13 @@ const routes: Routes = [
       {
         path: '**',
         redirectTo: 'search',
-      }
+      },
     ],
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-
 export class HomeRoutingModule {}
