@@ -1,9 +1,8 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version":1,
   "newProjectRoot": "projects",
   "projects": {
-    "pokedesk-v2": {
+    "pokedesk": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pokedesk-v2",
+            "outputPath": "dist/pokedesk",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pokedesk-v2:build:production"
+              "browserTarget": "pokedesk:build:production"
             },
             "development": {
-              "browserTarget": "pokedesk-v2:build:development"
+              "browserTarget": "pokedesk:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pokedesk-v2:build"
+            "browserTarget": "pokedesk:build"
           }
         },
         "test": {

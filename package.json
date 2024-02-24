@@ -1,17 +1,18 @@
 {
-  "name": "pokedesk-v2",
-  "version": "0.0.0",
+  "name": "pokedesk",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:href": "ng build --base-href ./",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run copy:assets",
+    "build:ghpages": "ng build --base-href https://DevJhojan.github.io/Pokedesk/ && npx angular-cli-ghpages --dir=dist/Pokedesk",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "delete:docs": "del docs",
-    "copy:dist": "copyfiles dist/pokedesk-v2/* ./docs -f",
-    "copy:assets": "copyfiles dist/pokedesk-v2/assets/* ./docs/assets -f"
+    "copy:dist": "copyfiles dist/pokedesk/* ./docs -f",
+    "copy:assets": "copyfiles dist/pokedesk/assets/* docs/assets"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@types/d3": "^7.4.1",
     "@types/d3-scale": "^4.0.5",
     "@types/d3-shape": "^3.1.3",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
