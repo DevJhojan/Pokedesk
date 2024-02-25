@@ -1,7 +1,4 @@
 [buld]
   publish = "dist/pokedesk"
-  command = "ng build "
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  stutus = 200
+  command = "ng build --prod"
+
