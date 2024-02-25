@@ -1,4 +1,4 @@
 [buld]
   publish = "dist/pokedesk"
-  command = "ng build --prod"
+  command = "npm run build"
 
