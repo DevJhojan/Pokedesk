@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent, SingupComponent } from '.';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { PagesAuthComponent } from '../layouts';
 
 const routes: Routes = [

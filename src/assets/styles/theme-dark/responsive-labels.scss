@@ -1,0 +1,36 @@
+@use "./labels.scss";
+
+@media (max-width: 768px) {
+  article {
+    margin: auto;
+    width: 80%;
+  }
+  main {
+    margin: auto;
+    width: 80%;
+  }
+}
+@media (max-width: 450px){
+  article {
+    margin: auto;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  h1 {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+  }
+
+  h2,
+  h3,
+  h4 {
+    padding: 0rem;
+    width: 100%;
+  }
+}

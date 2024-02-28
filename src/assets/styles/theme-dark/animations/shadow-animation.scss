@@ -1,0 +1,10 @@
+@import "../colors.scss";
+
+@keyframes animation-shadow-dark{
+  from {
+    box-shadow: $shadow-start;
+  }
+  to {
+    box-shadow: $shadow-end;
+  }
+}

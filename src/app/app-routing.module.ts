@@ -5,7 +5,7 @@ import { Error404PagesComponent } from './shared/pages';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pokedesk',
+    redirectTo: 'auth',
     pathMatch: 'full',
   },
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'pokedesk',
-    title: 'pokedesk',
+    title: 'Busca tu Pokemon',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {

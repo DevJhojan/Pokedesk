@@ -1,1 +1,10 @@
-<p>login works!</p>
+<form  class="column txt-center m-2">
+  <label for="loginEmail">email</label>
+  <input type="email" name="email" id="loginEmail" />
+  <label for="loginPassword">password</label>
+  <input type="password" name="password" id="loginPassword" />
+  <div>
+    <button type="button" (click)="login()" class="bgc-red">Log In</button>
+    <a routerLink="/auth/singup">Sing Up</a>
+  </div>
+</form>
