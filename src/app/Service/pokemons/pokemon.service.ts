@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { IListModel } from '../../Models/i-list.model';
 import { IPokemonModel } from '../../Models/pokemon.model';
 const detail_pokemon = 'https://pokeapi.co/api/v2/pokemon';
-const list_pokemons = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=0/';
+const list_pokemons = 'https://pokeapi.co/api/v2/pokemon?limit=1200&offset=0/';
 @Injectable({
   providedIn: 'root',
 })
