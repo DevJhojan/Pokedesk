@@ -77,7 +77,8 @@ main {
   flex-wrap: wrap;
 }
 .img-list {
-  width: 70%;
+  width: 8rem;
+  height: 10rem;
 }
 .article-list {
   margin: 1rem;
@@ -86,8 +87,8 @@ main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  width: 15%;
-  height: 10%;
+  width: 13rem;
+  height: 15rem;
 }
 
 .searchContend {
