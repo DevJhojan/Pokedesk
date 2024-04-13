@@ -9,13 +9,8 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'auth',
-    title: 'Bienvenido a pokemon-fansub',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-  },
-  {
     path: 'pokedesk',
-    title: 'pokedesk',
+    title: 'Busca tu Pokemon',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {

@@ -16,7 +16,14 @@ const routes: Routes = [
         path: 'pokemon/:name',
         component: PokemonDetailComponent,
       },
-
+      {
+        path: 'login',
+        loadComponent: ()=> import('./auth/login/login.component').then( login => login.LoginComponent ),
+      },
+      {
+        path: 'sing_up',
+        loadComponent: ()=> import('./auth/sing_up/sing_up.component').then( sing_up => sing_up.SingUpComponent ),
+      },
       {
         path: '**',
         redirectTo: 'search',

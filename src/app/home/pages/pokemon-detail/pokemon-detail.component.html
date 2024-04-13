@@ -1,10 +1,15 @@
-<article class="detail">
-  <img [src]="pokemon?.sprites?.other.dream_world.front_default" [alt]="pokemon?.name" />
-  <ngx-charts-pie-grid
-    [view]="view"
-    [scheme]="colors"
-    [results]="stats"
-    (select)="onSelect($event)"
-  >
-  </ngx-charts-pie-grid>
+<article class="detail row">
+  <img
+    [src]="pokemon?.sprites?.other.dream_world.front_default"
+    [alt]="pokemon?.name"
+    class="bgc-tr img-detail"
+  />
+  <div class="column mlp-15">
+    <h5 class="bgc-tr">{{pokemon?.name | uppercase}}</h5>
+    <ul class="bgc-tr">
+      <li *ngFor="let stat of stats_pokemon" class="bgc-tr ">
+        {{ stat.name }} : {{ stat.value}}%
+      </li>
+    </ul>
+  </div>
 </article>

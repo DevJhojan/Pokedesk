@@ -1,0 +1,115 @@
+@import "./colors.scss";
+@import "./animations/shadow-animation.scss";
+
+.bgc-red{
+  background-color: red;
+}
+.bgc-tr{
+  background-color: transparent;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.nowrap {
+  flex-wrap: nowrap;
+}
+.m-auto{
+  margin: auto;
+}
+.m-0 {
+  margin: 0;
+}
+.mlp-15{
+  margin-left: 15%;
+}
+.mlp-25 {
+  margin-left: 25%;
+}
+.mlp-30 {
+  margin-left: 30%;
+}
+.mlp-35 {
+  margin-left: 35%;
+}
+.mlp-40 {
+  margin-left: 40%;
+}
+.mlp-50 {
+  margin-left: 50%;
+}
+.mtp-2{
+  margin-top: 2%;
+}
+.txt-center {
+  text-align: center;
+}
+.pd-0 {
+  padding: 0;
+}
+.pd-1 {
+  padding: 1%;
+}
+.pd-2 {
+  padding: 2%;
+}
+.fz-100 {
+  font-size: 100%;
+}
+.fz-150 {
+  font-size: 150%;
+}
+.w-100 {
+  width: 100%;
+}
+.w-95 {
+  width: 95%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-20 {
+  width: 20%;
+}
+.h-50 {
+  height: 50%;
+}
+.img-gif {
+  margin-top: 1rem;
+  width: 20%;
+  border-radius: 1rem;
+  box-shadow: $shadow-image;
+}
+.img-detail{
+  width: 30%;
+  height: 20%;
+  transition: all 0.5s;
+  &:hover{
+    width: 50%;
+    height: 40%;
+  }
+}
+.img-profile {
+  width: 50%;
+  height: 40%;
+  border-radius: 2rem;
+}

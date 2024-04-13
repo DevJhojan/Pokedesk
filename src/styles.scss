@@ -1,6 +1,9 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+
 @use "@angular/material" as mat;
+
+@import "./assets/styles/theme-dark/index.scss";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -36,12 +39,9 @@ $pokedesk-v2-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-}
-body {
+* {
   margin: 0;
+  padding: 1%;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: black;
   color: white;
@@ -80,10 +80,9 @@ main {
   width: 70%;
 }
 .article-list {
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
-  background-color: rgb(46, 45, 45);
-  border-radius: 2rem;
+  background-color: transparent;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -91,19 +90,6 @@ main {
   height: 10%;
 }
 
-.detail-list {
-  background-color: rgb(82, 82, 82);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: 1rem;
-  border-radius: 1rem;
-  img {
-    width: 35%;
-    padding: 1rem;
-  }
-}
 .searchContend {
   width: 100%;
   display: flex;
