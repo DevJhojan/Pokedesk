@@ -4,6 +4,9 @@
 .bgc-red{
   background-color: red;
 }
+.bgc-tr{
+  background-color: transparent;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -23,6 +26,9 @@
 }
 .m-0 {
   margin: 0;
+}
+.mlp-15{
+  margin-left: 15%;
 }
 .mlp-25 {
   margin-left: 25%;
@@ -92,6 +98,15 @@
   width: 20%;
   border-radius: 1rem;
   box-shadow: $shadow-image;
+}
+.img-detail{
+  width: 30%;
+  height: 20%;
+  transition: all 0.5s;
+  &:hover{
+    width: 50%;
+    height: 40%;
+  }
 }
 .img-profile {
   width: 50%;

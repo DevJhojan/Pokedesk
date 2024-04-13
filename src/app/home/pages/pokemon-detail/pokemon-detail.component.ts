@@ -20,13 +20,6 @@ export class PokemonDetailComponent {
   view: [number, number] = [500, 400];
   colors: any;
   stats_pokemon: ICake[] = [];
-  stats: any[] = [];
-  // customColors: any[] = [
-  //   {
-  //     name: 'hp',
-  //     value: '#ffffff',
-  //   },
-  // ];
 
   color: any = 'white';
   constructor(
@@ -43,7 +36,6 @@ export class PokemonDetailComponent {
         let value = stat.base_stat;
         this.stats_pokemon.push({ name, value });
       });
-      this.stats = this.stats_pokemon;
       this.pokemon = pokemon;
     });
   }
