@@ -17,7 +17,7 @@
   <article *ngFor="let pokemon of pokemonsNames" class="article-list">
     <app-pokemon-front [namePokemon]="pokemon.name"></app-pokemon-front>
     <button class="button-list" (click)="detail_pokemon(pokemon.name)">
-      Detail of {{ pokemon.name }}
+      Detail of {{ pokemon.name | uppercase}}
     </button>
   </article>
 </main>
