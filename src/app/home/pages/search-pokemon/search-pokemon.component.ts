@@ -30,13 +30,22 @@ export class SearchPokemonComponent implements OnInit {
   }
   searchPokemon(namePokemon: string) {
     this.search.setValue(namePokemon);
-    if(this.search.value == '')this.getPokemons();
-    else{
+    if (this.search.value == '') this.getPokemons();
+    else {
       this.pokemonsNames = [];
-      this.pokemonService.getSearchPokemon(this.search.value ?? '')
-        .subscribe((pokemon)=>{
-          this.pokemonsNames.push({name: pokemon.name, url: ''})
-        })
+      try{
+        this.pokemonService
+          .getSearchPokemon(this.search.value ?? '')
+          .subscribe((pokemon) => {
+            this.pokemonsNames.push({
+              name: pokemon.name,
+              url: pokemon.sprites.front_default,
+            });
+          });
+      }catch(e){
+        console.log("error", e)
+      };
+      this.search.setValue('');
     }
   }
 }

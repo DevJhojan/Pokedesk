@@ -17,6 +17,8 @@ export class PokemonService {
     return this.http.get<IListModel>(`${list_pokemons}`, requestOptions);
   }
 
+  
+
   getPokemon(name: string): Observable<IPokemonModel> {
     const headers = new HttpHeaders({ Authorization: 'Bearer ' });
     const requestOptions = { headers: headers };
