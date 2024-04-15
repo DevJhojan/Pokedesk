@@ -15,6 +15,7 @@ import { PokemonDetailComponent } from './pages/pokemon-detail/pokemon-detail.co
 import { SearchPokemonComponent } from './pages/search-pokemon/search-pokemon.component';
 import { PokemonService } from '../Service';
 import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.compo
     NgxChartsModule,
     ScrollingModule,
     CdkTableModule,
+    ScrollingModule,
+    InfiniteScrollModule
   ],
+  
   providers: [PokemonService],
   schemas: [NO_ERRORS_SCHEMA],
 })

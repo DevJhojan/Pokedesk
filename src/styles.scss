@@ -45,6 +45,7 @@ $pokedesk-v2-theme: mat.define-light-theme(
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: black;
   color: white;
+  scroll-behavior: smooth;
 }
 
 table {
@@ -75,6 +76,20 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.container-scroll {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+}
+.cdk-virtual-scroll-content-wrapper{
+  width: 99%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .img-list {
   width: 8rem;

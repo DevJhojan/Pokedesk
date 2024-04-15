@@ -1,4 +1,3 @@
-
 <div class="searchContend">
   <img
     class="logo-pokemon"
@@ -13,11 +12,24 @@
     placeholder="search Pokemon"
   />
 </div>
-<main>
-  <article *ngFor="let pokemon of pokemonsNames" class="article-list">
+<main
+  infiniteScroll
+  [fromRoot]="true"
+>
+  <article
+    *ngFor="
+      let pokemon of pokemonsNames;
+      templateCacheSize: 0;
+    "
+    class="article-list"
+  >
     <app-pokemon-front [namePokemon]="pokemon.name"></app-pokemon-front>
     <button class="button-list" (click)="detail_pokemon(pokemon.name)">
-      Detail of {{ pokemon.name | uppercase}}
+      Detail of {{ pokemon.name | uppercase }}
     </button>
   </article>
 </main>
+<hr class="hr-red">
+<div>
+  <button (click)="showMorePokemons()">Show more</button>
+</div>
