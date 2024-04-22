@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IEntityModel, IPokemonModel } from '@models/*';
+import { IEntityModel } from '@models/*';
 import { PokemonService } from '@services/*';
-import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-search-pokemon',
@@ -12,14 +11,12 @@ import { debounceTime } from 'rxjs';
 })
 export class SearchPokemonComponent implements OnInit {
   pokemonsNames: IEntityModel[] = [];
-  allPokemons: IEntityModel[] = [];
   searchGroup: FormGroup;
   selector = '.main-panel';
   search = new FormControl<string>('');
   limit: number = 100;
   constructor(private pokemonService: PokemonService, private router: Router) {
     this.getPokemons();
-    this.allPokemons = this.pokemonsNames;
     this.searchGroup = new FormGroup({
       searchInput: new FormControl<String>(''),
     });
