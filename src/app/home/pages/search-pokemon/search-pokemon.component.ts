@@ -18,7 +18,7 @@ export class SearchPokemonComponent implements OnInit {
   searchGroup: FormGroup;
   selector = '.main-panel';
   search = new FormControl<string>('');
-  limit: number = 10;
+  limit: number = 100;
   length = 10;
   pageSize = 10;
   pageIndex = 0;
