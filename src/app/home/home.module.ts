@@ -16,6 +16,8 @@ import { SearchPokemonComponent } from './pages/search-pokemon/search-pokemon.co
 import { PokemonService } from '../Service';
 import { PokemonFrontComponent } from './pages/pokemon-front/pokemon-front.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -26,17 +28,14 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
+    MaterialModule,
     NgxChartsModule,
     ScrollingModule,
     CdkTableModule,
     ScrollingModule,
     InfiniteScrollModule
   ],
-  
+
   providers: [PokemonService],
   schemas: [NO_ERRORS_SCHEMA],
 })
