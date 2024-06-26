@@ -1,0 +1,12 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #fff;
+$hover-color: darken($primary-color, 10%);
+$active-color: darken($primary-color, 15%);
+$border-radius: 1rem;
+$padding: 1rem;
+$font-size: 150%;
+$transition-time: 0.3s;
+$box-shadow-start: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 6px 10px rgba(0, 0, 0, 0.2);
+$box-shadow-active: 0 2px 4px rgba(0, 0, 0, 0.1);

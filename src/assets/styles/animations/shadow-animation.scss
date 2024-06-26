@@ -1,0 +1,24 @@
+@import "../colors.scss";
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: var(--shadowStart);
+  }
+  50% {
+    box-shadow: var(--shadowMid);
+  }
+  100% {
+    box-shadow: var(--shadowStart);
+  }
+}
+@keyframes glowing {
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0,
+  }
+  100%{
+    background-position: 0 0;
+  }
+}

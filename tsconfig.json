@@ -23,7 +23,7 @@
     "paths": {
       "@models/*": ["src/app/models"],
       "@layouts/*": ["src/app/layouts"],
-      "@services/*": ["src/app/Service"],
+      "@services/*": ["src/app/services"],
       "@shared/*": ["src/app/shared"],
       "@assets/*": ["src/assets"],
       "@func/*": ["src/assets/func"]

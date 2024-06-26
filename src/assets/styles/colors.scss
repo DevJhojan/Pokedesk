@@ -1,0 +1,29 @@
+.lightTheme{
+  --bgColor: #bbbbbb;
+  --bgColorHover: #ebebeb;
+  --bgColorActivate: #e9d9d9;
+  --bgImg: url('../img/wallpaper.jpg');
+  --title: #000000;
+  --subtitle: #363636;
+  --text: #161313;
+  --shadowStart: 2px 2px 5px 3px rgba(109, 94, 94, 0.459);
+  --shadowMid: 2px 2px 10px 3px rgba(102, 101, 101, 0.3);
+  --shadowEnd: 2px 2px 7px 5px rgb(73, 73, 73);
+  --shadowImage: 2px 2px 15px 2px rgba(39, 39, 39, 0.718);
+  --gradiantBorder: linear-gradient(45deg,  #6b6565f9, #757474 , #696969, #5c5959);
+}
+:root{
+  --bgColor: #1a1818;
+  --bgColorHover: #474747;
+  --bgColorActivate: #1d1d1d;
+  --bgImg: url('../img/wallpaper-dark.jpg');
+  --title: #ffffff;
+  --subtitle: #e6dbdb;
+  --text: #ffeeee;
+  --shadowStart: 2px 2px 5px 3px rgba(170, 166, 166, 0.459);
+  --shadowStart: 2px 2px 5px 3px rgba(170, 166, 166, 0.459);
+  --shadowMid: 2px 2px 10px 3px rgba(141, 141, 141, 0.3);
+  --shadowEnd: 2px 2px 7px 5px rgb(97, 97, 97);
+  --shadowImage: 2px 2px 15px 2px rgba(175, 175, 175, 0.718);
+  --gradiantBorder: linear-gradient(45deg,  #888888f9, #666666 , #696969, #5c5959);
+}

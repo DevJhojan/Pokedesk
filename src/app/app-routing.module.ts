@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Error404PagesComponent } from './shared/pages';
+import { Error404PagesComponent } from './shared/error404-pages/error404-pages.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'pokedesk',
     title: 'Busca tu Pokemon',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    //loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: '404',
