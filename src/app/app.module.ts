@@ -10,11 +10,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { PagesHomeComponent } from './layouts/pages-home/pages-home.component';
-import { PagesAuthComponent } from './layouts/pages-auth/pages-auth.component';
 
 @NgModule({
-  declarations: [AppComponent, PagesHomeComponent, PagesAuthComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,6 +24,7 @@ import { PagesAuthComponent } from './layouts/pages-auth/pages-auth.component';
     MatSortModule,
     MatFormFieldModule,
     NgxChartsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

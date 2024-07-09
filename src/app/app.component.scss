@@ -1,0 +1,15 @@
+@import "../assets/styles/index.scss";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css");
+.content{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden scroll;
+  margin-left: 0;
+  padding: 0;
+  background-image: var(--bgImg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; width: 100vw;
+  .menu{
+    width: 15rem;
+  }
+}

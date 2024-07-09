@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.12",
-    "@angular/cli": "^17.2.1",
+    "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^16.2.12",
     "@types/events": "^3.0.1",
     "@types/file-saver": "^2.0.5",

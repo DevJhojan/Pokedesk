@@ -1,6 +1,6 @@
 div {
   position: absolute;
-  right: 0.5rem;
+  left: 0.5rem;
   top: 0.5rem;
   padding: 0.5px;
   border: none;
@@ -10,9 +10,6 @@ div {
   transition: 0.3s all;
   img{
     border-radius: 50%;
-    &:hover {
-      box-shadow: var(--shadowStart);
-    }
   }
 }
 

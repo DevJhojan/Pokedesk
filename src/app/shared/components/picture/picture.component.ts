@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'shared-picture',
   templateUrl: './picture.component.html',
   styleUrls: ['./picture.component.scss'],
