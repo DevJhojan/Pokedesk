@@ -9,7 +9,19 @@
   background-image: var(--bgImg);
   background-repeat: no-repeat;
   background-size: 100% 100%; width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   .menu{
     width: 15rem;
+  }
+  main{
+    width: 70%;
+    height: 90%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    overflow: hidden scroll;
+    box-shadow: var(--shadowStart);
   }
 }

@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
         <shared-btn-switch-theme (changeTheme)="toggleTheme($event)" />
         <shared-menu-and-history />
       </div>
-      <router-outlet />
+      <main>
+        <router-outlet />
+      </main>
     </div>
   `,
   styleUrls: ['./app.component.scss']

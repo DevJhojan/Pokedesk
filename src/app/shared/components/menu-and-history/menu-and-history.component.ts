@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Menu } from 'src/app/data/pokemon.data';
 
 @Component({
   selector: 'shared-menu-and-history',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-and-history.component.scss']
 })
 export class MenuAndHistoryComponent {
-
+  items_menu: string[] = Menu;
 }
