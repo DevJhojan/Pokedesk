@@ -1,1 +1,9 @@
-<p>card-pokemon works!</p>
+<div>
+  <div class="content-img">
+  <!-- hay un error aca -->
+    <shared-picture
+      [img]="img1.sprites.other?.dream_world?.front_default ??''"
+      [alt]="img1.sprites.other?.dream_world?.front_default ?? ''"
+    />
+  </div>
+</div>

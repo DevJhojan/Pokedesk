@@ -13,6 +13,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  &::-webkit-scrollbar{
+    display: none;
+  }
   .menu{
     width: 15rem;
   }
@@ -23,5 +26,9 @@
     margin-top: 2rem;
     overflow: hidden scroll;
     box-shadow: var(--shadowStart);
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
 }
+

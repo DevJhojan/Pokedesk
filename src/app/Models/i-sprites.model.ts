@@ -1,3 +1,5 @@
+import { IOtherModel } from "./i-other.model";
+
 export interface ISpritesModel{
   back_default: string;
   back_female: any;

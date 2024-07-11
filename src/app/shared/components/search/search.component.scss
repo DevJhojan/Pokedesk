@@ -1,0 +1,15 @@
+.search{
+  width: 70%;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
+  input{
+    width: 90%;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 1rem;
+  }
+}

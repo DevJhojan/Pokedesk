@@ -11,7 +11,6 @@ export class PictureComponent implements OnInit {
   @Input() alt: string = ''
 
   public hasLoaded: boolean = false;
-  constructor() {}
   ngOnInit():void {
 		if(!this.img) new Error('url property is required');
 	}

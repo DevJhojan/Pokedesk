@@ -1,0 +1,16 @@
+div{
+  margin-top: 2%;
+  margin-left: 1px;
+  width: 67%;
+  height: 75%;
+  overflow: hidden scroll;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position:relative;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}

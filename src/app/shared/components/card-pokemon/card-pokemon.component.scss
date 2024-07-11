@@ -1,0 +1,22 @@
+@import "../../../../assets/styles/index.scss";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css");
+div{
+  width: 15rem;
+  height: 10rem;
+  margin: 1rem;
+  padding: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 1rem;
+  flex-direction: row;
+  box-shadow: var(--shadowStart);
+  .content-img{
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+    shared-picture{
+      width: 100%;
+    }
+  }
+}

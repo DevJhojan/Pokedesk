@@ -12,6 +12,9 @@ nav {
     justify-content: center;
     overflow: hidden scroll;
     box-shadow: var(--shadowStart);
+    &::-webkit-scrollbar{
+      display: none;
+    }
     li {
       width: 95%;
       list-style: none;

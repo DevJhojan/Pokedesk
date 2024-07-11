@@ -5,13 +5,15 @@ import { BtnSwitchThemeComponent } from './components/btn-switch-theme/btn-switc
 import { PictureComponent } from './components/picture/picture.component';
 import { MenuAndHistoryComponent } from './components/menu-and-history/menu-and-history.component';
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
+import { SearchComponent } from './components/search/search.component';
 @NgModule({
   declarations: [
     Error404PagesComponent,
     BtnSwitchThemeComponent,
     PictureComponent,
     MenuAndHistoryComponent,
-    CardPokemonComponent
+    CardPokemonComponent,
+    SearchComponent
     ],
   imports:[CommonModule],
   exports: [
@@ -20,6 +22,7 @@ import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.com
     PictureComponent,
     MenuAndHistoryComponent,
     CardPokemonComponent,
+    SearchComponent,
     ],
 })
 export class SharedModule {}
