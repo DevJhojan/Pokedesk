@@ -2,8 +2,8 @@
   <div class="content-img">
   <!-- hay un error aca -->
     <shared-picture
-      [img]="img1.sprites.other?.dream_world?.front_default ??''"
-      [alt]="img1.sprites.other?.dream_world?.front_default ?? ''"
+      [img]="this.pokemon?.sprites?.other?.dream_world?.front_default ?? ''"
+      [alt]="this.pokemon?.name ?? ''"
     />
   </div>
 </div>

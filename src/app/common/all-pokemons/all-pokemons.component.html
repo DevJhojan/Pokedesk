@@ -1,7 +1,11 @@
 <shared-search />
 <div>
-  <shared-card-pokemon
-  *ngFor="let pokemon of AllPokemons"
-  [img1]="pokemon" />
+  <!--todo: corregir problema -->
+  <ng-container
+    *ngFor="let pokemonModel of allPokemonsModel"
+    >
+    <shared-card-pokemon
+      [pokemon]="pokemonModel" />
+  </ng-container>
 </div>
 

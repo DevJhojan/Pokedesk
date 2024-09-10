@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IPokemonModel } from 'src/app/Models';
+import { IEntityModel, IPokemonModel } from 'src/app/Models';
 import { IResource } from 'src/app/Models/i-resource.model';
 import { PokeApiService } from 'src/app/service/poke-api.service';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -11,16 +11,21 @@ import { SharedModule } from 'src/app/shared/shared.module';
   styleUrls: ['./all-pokemons.component.scss']
 })
 export class AllPokemonsComponent {
-  AllPokemons!: IPokemonModel[]
+  allPokemonsEntity!: IEntityModel[]
+  allPokemonsModel!: IPokemonModel[]
   constructor(private _pokeApiService: PokeApiService){
-    this._pokeApiService.getAllPokemon()
-    .subscribe((resource:IResource)=>{
-        this.AllPokemons = resource.results
+    this.getPokemonEntity().forEach(pokemonEntity =>{
+      this._pokeApiService.getOnePokemon(pokemonEntity.name)
+      .subscribe(pokemonModel =>this.allPokemonsModel.push(pokemonModel));
     })
   }
-  x (){
-    for(let pokedex of this.AllPokemons){
-      console.log("hola",pokedex)
-    }
+
+  getPokemonEntity():IEntityModel[]{
+    this._pokeApiService.getAllPokemon()
+    .subscribe((resource:IResource)=>{
+      return this.allPokemonsEntity = resource.results;
+    })
+    return this.allPokemonsEntity;
   }
+
 }

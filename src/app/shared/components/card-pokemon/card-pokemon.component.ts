@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IPokemonModel, ISpritesModel } from 'src/app/Models';
+import { IEntityModel, IPokemonModel, ISpritesModel } from 'src/app/Models';
+import { PokeApiService } from 'src/app/service/poke-api.service';
 
 @Component({
   selector: 'shared-card-pokemon',
@@ -8,9 +9,9 @@ import { IPokemonModel, ISpritesModel } from 'src/app/Models';
   styleUrls: ['./card-pokemon.component.scss']
 })
 export class CardPokemonComponent {
-  @Input() img1!: IPokemonModel;
+  @Input() pokemon?: IPokemonModel;
 
   constructor(){
-    console.log(this.img1)
+
   }
 }
