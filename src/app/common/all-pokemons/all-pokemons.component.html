@@ -28,7 +28,7 @@
         />
       </svg>
     </button>
-    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <span> {{ currentPage }} de {{ totalPages }}</span>
     <button (click)="nextPage()" [disabled]="currentPage === totalPages">
       <svg
         xmlns="http://www.w3.org/2000/svg"
