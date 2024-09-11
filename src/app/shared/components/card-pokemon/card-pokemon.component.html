@@ -1,9 +1,13 @@
-<div>
+<div class="container">
   <div class="content-img">
-  <!-- hay un error aca -->
     <shared-picture
       [img]="this.pokemon?.sprites?.other?.dream_world?.front_default ?? ''"
       [alt]="this.pokemon?.name ?? ''"
     />
+  </div>
+  <div class="content-info">
+    <span>#{{this.pokemon?.id}}</span>
+    <h3>{{this.pokemon?.name | uppercase}} </h3>
+    <shared-graphic-meter [progress]="this.statsHp()" ></shared-graphic-meter>
   </div>
 </div>

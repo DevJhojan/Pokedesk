@@ -6,6 +6,7 @@ import { PictureComponent } from './components/picture/picture.component';
 import { MenuAndHistoryComponent } from './components/menu-and-history/menu-and-history.component';
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 import { SearchComponent } from './components/search/search.component';
+import { GraphicMeterComponent } from './components/graphic-meter/graphic-meter.component';
 @NgModule({
   declarations: [
     Error404PagesComponent,
@@ -13,7 +14,8 @@ import { SearchComponent } from './components/search/search.component';
     PictureComponent,
     MenuAndHistoryComponent,
     CardPokemonComponent,
-    SearchComponent
+    SearchComponent,
+    GraphicMeterComponent
     ],
   imports:[CommonModule],
   exports: [

@@ -14,4 +14,8 @@ export class CardPokemonComponent {
   constructor(){
 
   }
+  statsHp(): number{
+
+    return this.pokemon?.stats[0].base_stat??0;
+  }
 }
