@@ -1,7 +1,14 @@
+<input
+  type="text"
+  class="search"
+  placeholder="Buscar Pokémon..."
+  [(ngModel)]="searchText"
+  (ngModelChange)="filterPokemons()" />
 <div class="container" *ngIf="paginatedPokemons.length > 0">
   <ng-container *ngFor="let pokemonModel of paginatedPokemons">
     <shared-card-pokemon [pokemon]="pokemonModel" />
   </ng-container>
+
 
   <div class="pagination">
     <button (click)="goToFirstPage()" [disabled]="currentPage === 1">
@@ -10,7 +17,6 @@
         height="24px"
         viewBox="0 -960 960 960"
         width="24px"
-        fill="#e8eaed"
       >
         <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
       </svg>
@@ -21,7 +27,7 @@
         height="24px"
         viewBox="0 -960 960 960"
         width="24px"
-        fill="#e8eaed"
+
       >
         <path
           d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
@@ -35,7 +41,6 @@
         height="24px"
         viewBox="0 -960 960 960"
         width="24px"
-        fill="#e8eaed"
       >
         <path
           d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
@@ -48,7 +53,6 @@
         height="24px"
         viewBox="0 -960 960 960"
         width="24px"
-        fill="#e8eaed"
       >
         <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
       </svg>

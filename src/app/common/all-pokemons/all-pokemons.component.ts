@@ -14,7 +14,9 @@ export class AllPokemonsComponent {
   allPokemonsEntity: IEntityModel[] = [];
   allPokemonsModel: IPokemonModel[] = [];
   public paginatedPokemons: IPokemonModel[] = [];
+  public filteredPokemons: IPokemonModel[] = [];
 
+  public searchText: string = '';
   public currentPage: number = 1; // Página inicial
   public pageSize: number = 6; // Cantidad de Pokémon por página
   public totalPages: number = 1;
@@ -34,16 +36,32 @@ export class AllPokemonsComponent {
             this.totalPages = Math.ceil(
               this.allPokemonsModel.length / this.pageSize
             );
-            this.loadPage(this.currentPage);
+            this.filterPokemons();
           });
       }
     });
   }
+
+  filterPokemons(): void {
+    console.log(this.allPokemonsModel)
+    if (this.searchText) {
+      const searchLower = this.searchText.toLowerCase();
+      this.filteredPokemons = this.allPokemonsModel.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchLower)
+      );
+    } else {
+      this.filteredPokemons = [...this.allPokemonsModel];
+    }
+
+    this.totalPages = Math.ceil(this.filteredPokemons.length / this.pageSize);
+    this.loadPage(this.currentPage);
+  }
+
   loadPage(page: number): void {
     this.currentPage = page;
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
-    this.paginatedPokemons = this.allPokemonsModel.slice(startIndex, endIndex);
+    this.paginatedPokemons = this.filteredPokemons.slice(startIndex, endIndex);
   }
 
   // Función para ir a la página anterior

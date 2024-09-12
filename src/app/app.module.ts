@@ -11,6 +11,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AllPokemonsComponent } from './common/all-pokemons/all-pokemons.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, AllPokemonsComponent],
@@ -25,6 +26,7 @@ import { AllPokemonsComponent } from './common/all-pokemons/all-pokemons.compone
     MatSortModule,
     MatFormFieldModule,
     NgxChartsModule,
+    FormsModule
 ],
   providers: [],
   bootstrap: [AppComponent],
