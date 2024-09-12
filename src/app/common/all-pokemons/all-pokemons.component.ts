@@ -23,7 +23,7 @@ export class AllPokemonsComponent {
   constructor(private _pokeApiService: PokeApiService) {
     this.getPokemonEntity();
   }
-
+  
   getPokemonEntity(): void {
     this._pokeApiService.getAllPokemon().subscribe((resource: IResource) => {
       this.allPokemonsEntity = resource.results;

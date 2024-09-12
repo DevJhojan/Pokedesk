@@ -13,6 +13,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AllPokemonsComponent } from './common/all-pokemons/all-pokemons.component';
 import { FormsModule } from '@angular/forms';
 
+//todo: Hay que hacer modal para mostrar todos los datos del pokemon
+
 @NgModule({
   declarations: [AppComponent, AllPokemonsComponent],
   imports: [
