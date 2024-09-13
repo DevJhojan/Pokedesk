@@ -1,0 +1,64 @@
+h1,
+h2,
+h3 {
+  color: var(--text);
+  margin-top: 1rem;
+}
+.content {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: var(--bgImg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  overflow: hidden scroll;
+  scrollbar-width: none;
+  .information {
+    width: 15rem;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--bgCard);
+    border-radius: 1rem;
+    box-shadow: var(--shadowStart);
+    overflow: hidden scroll;
+    scrollbar-width: none;
+  }
+  .stats {
+    width: 15rem;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    shared-graphic-meter {
+      width: 95%;
+    }
+  }
+  .content-img {
+    box-shadow: var(--shadowStart);
+    border-radius: 30%;
+    overflow: hidden;
+    width: 15rem;
+    height: 15rem;
+    shared-picture {
+      width: 100%;
+    }
+  }
+}
+
+li {
+  color: var(--text);
+  list-style: none;
+}
+p {
+  color: var(--text);
+  strong {
+    color: var(--text);
+  }
+}

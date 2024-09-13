@@ -9,4 +9,5 @@ import { Component, Input, OnChanges, OnInit} from '@angular/core';
 
 export class GraphicMeterComponent  {
   @Input() progress: number = 0;
+  @Input() text: string = "";
 }

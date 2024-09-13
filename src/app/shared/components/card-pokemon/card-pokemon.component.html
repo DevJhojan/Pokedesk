@@ -8,7 +8,7 @@
   <div class="content-info">
     <span>#{{this.pokemon?.id}}</span>
     <h3>{{this.pokemon?.name | uppercase}} </h3>
-    <shared-graphic-meter [progress]="this.statsHp()" ></shared-graphic-meter>
+    <shared-graphic-meter [progress]="this.pokemon?.base_experience??0" [text]="'EXp'" ></shared-graphic-meter>
     <span *ngIf="!this.image">pokemon no encontrado</span>
   </div>
   <div class="types">

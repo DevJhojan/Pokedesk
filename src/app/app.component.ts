@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     <div class="content">
       <div class="menu">
         <shared-btn-switch-theme (changeTheme)="toggleTheme($event)" />
-        <shared-menu-and-history />
       </div>
       <main>
         <router-outlet />

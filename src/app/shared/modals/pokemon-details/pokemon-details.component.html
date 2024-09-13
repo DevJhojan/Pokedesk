@@ -1,0 +1,93 @@
+<div class="content" mat-dialog-content>
+  <div class="information">
+    <h1>{{ data.name | uppercase }}</h1>
+    <p>
+      <strong>Base Experience:</strong>
+      <shared-graphic-meter
+        [progress]="this.data.base_experience"
+        [text]="'EXP'"
+      ></shared-graphic-meter>
+    </p>
+    <h3>Types:</h3>
+    <ul
+      [ngStyle]="{
+        width: '100%',
+        display: 'flex',
+        'flex-direction': 'row',
+        'flex-wrap': 'wrap',
+        'justify-content': 'space-around'
+      }"
+    >
+      <li
+        *ngFor="let type of data.types"
+        [ngStyle]="{
+          width: '30%',
+          'background-color': getTypeColor(type.type.name),
+          color: 'var(--text)',
+          'border-radius': '0.5rem',
+          padding: '0.5rem',
+          'font-size': '90%',
+          'font-weight': 'bold',
+          'text-align': 'center',
+          'margin-top': '0.3rem'
+        }"
+      >
+        {{ type.type.name | uppercase }}
+      </li>
+    </ul>
+
+    <h3>Abilities:</h3>
+    <ul>
+      <li
+        *ngFor="let ability of data.abilities"
+        [ngStyle]="{
+          width: 'auto',
+          'background-color': getAbilityColor(ability.ability.name),
+          'border-radius': '0.5rem',
+          padding: '0.5rem',
+          'margin-top': '0.3rem',
+          'font-weight': 'bold',
+          'text-align': 'center'
+        }"
+      >
+        {{ ability.ability.name | uppercase }}
+        <!-- <span>
+          {{ this.abilityDescription.effect_entries[1].effect ?? '' }}
+        </span> -->
+      </li>
+
+    </ul>
+  </div>
+  <div class="stats">
+    <shared-graphic-meter
+      [progress]="this.data.stats[0].base_stat"
+      [text]="this.data.stats[0].stat.name"
+    ></shared-graphic-meter>
+    <shared-graphic-meter
+      [progress]="this.data.stats[1].base_stat"
+      [text]="this.data.stats[1].stat.name"
+    ></shared-graphic-meter>
+    <shared-graphic-meter
+      [progress]="this.data.stats[2].base_stat"
+      [text]="this.data.stats[2].stat.name"
+    ></shared-graphic-meter>
+    <shared-graphic-meter
+      [progress]="this.data.stats[3].base_stat"
+      [text]="this.data.stats[3].stat.name"
+    ></shared-graphic-meter>
+    <shared-graphic-meter
+      [progress]="this.data.stats[4].base_stat"
+      [text]="this.data.stats[4].stat.name"
+    ></shared-graphic-meter>
+    <shared-graphic-meter
+      [progress]="this.data.stats[5].base_stat"
+      [text]="this.data.stats[5].stat.name"
+    ></shared-graphic-meter>
+  </div>
+  <div class="content-img">
+    <shared-picture
+      [img]="this.imagePokemon()"
+      [alt]="data.name"
+    ></shared-picture>
+  </div>
+</div>

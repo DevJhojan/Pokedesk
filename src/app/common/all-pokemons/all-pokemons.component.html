@@ -6,7 +6,7 @@
   (ngModelChange)="filterPokemons()" />
 <div class="container" *ngIf="paginatedPokemons.length > 0">
   <ng-container *ngFor="let pokemonModel of paginatedPokemons">
-    <shared-card-pokemon [pokemon]="pokemonModel" />
+    <shared-card-pokemon [pokemon]="pokemonModel" (click)="openModal(pokemonModel)" class="cardPokemon"/>
   </ng-container>
 
 

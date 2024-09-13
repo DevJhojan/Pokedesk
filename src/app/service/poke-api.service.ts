@@ -18,4 +18,7 @@ export class PokeApiService {
   getOnePokemon(namePokemon:string):Observable<IPokemonModel>{
     return this._httpClient.get<IPokemonModel>(`${environment.url}/${namePokemon}`);
   }
+  getAbility(ability: string):Observable<any>{
+    return this._httpClient.get<any>(`${environment.urlAbilities}${ability}`);
+  }
 }

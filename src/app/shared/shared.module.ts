@@ -7,6 +7,7 @@ import { MenuAndHistoryComponent } from './components/menu-and-history/menu-and-
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 import { SearchComponent } from './components/search/search.component';
 import { GraphicMeterComponent } from './components/graphic-meter/graphic-meter.component';
+import { PokemonDetailsComponent } from './modals/pokemon-details/pokemon-details.component';
 @NgModule({
   declarations: [
     Error404PagesComponent,
@@ -15,7 +16,8 @@ import { GraphicMeterComponent } from './components/graphic-meter/graphic-meter.
     MenuAndHistoryComponent,
     CardPokemonComponent,
     SearchComponent,
-    GraphicMeterComponent
+    GraphicMeterComponent,
+    PokemonDetailsComponent
     ],
   imports:[CommonModule],
   exports: [
@@ -25,6 +27,7 @@ import { GraphicMeterComponent } from './components/graphic-meter/graphic-meter.
     MenuAndHistoryComponent,
     CardPokemonComponent,
     SearchComponent,
+    PokemonDetailsComponent
     ],
 })
 export class SharedModule {}

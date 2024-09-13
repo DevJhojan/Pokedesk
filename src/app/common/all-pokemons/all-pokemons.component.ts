@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { IEntityModel, IPokemonModel } from 'src/app/Models';
 import { IResource } from 'src/app/Models/i-resource.model';
 import { PokeApiService } from 'src/app/service/poke-api.service';
+import { PokemonDetailsComponent } from 'src/app/shared/modals/pokemon-details/pokemon-details.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
@@ -20,10 +22,10 @@ export class AllPokemonsComponent {
   public currentPage: number = 1; // Página inicial
   public pageSize: number = 6; // Cantidad de Pokémon por página
   public totalPages: number = 1;
-  constructor(private _pokeApiService: PokeApiService) {
+  constructor(private _pokeApiService: PokeApiService, private dialog: MatDialog) {
     this.getPokemonEntity();
   }
-  
+
   getPokemonEntity(): void {
     this._pokeApiService.getAllPokemon().subscribe((resource: IResource) => {
       this.allPokemonsEntity = resource.results;
@@ -55,6 +57,13 @@ export class AllPokemonsComponent {
 
     this.totalPages = Math.ceil(this.filteredPokemons.length / this.pageSize);
     this.loadPage(this.currentPage);
+  }
+
+  openModal(pokemon: IPokemonModel){
+    this.dialog.open(PokemonDetailsComponent,{
+      width: '90%',
+      data: pokemon
+    })
   }
 
   loadPage(page: number): void {
