@@ -11,6 +11,7 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
   styleUrls: ['./pokemon-details.component.scss'],
 })
 export class PokemonDetailsComponent {
+  //todo: Agregar descripción de especies ya que esta muestra descripción del pokemon
   image: boolean = true;
   ability?: any;
   descriptionShow: string = '';
