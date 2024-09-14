@@ -1,0 +1,23 @@
+<div>
+  <div
+    (click)="slashConten()"
+    [ngStyle]="{
+      width: 'auto',
+      'background-color': getAbilityColor(nameAbility),
+      'border-radius': '0.5rem',
+      'padding': '0.5rem',
+      'margin-top': '0.3rem',
+      'font-weight': 'bold',
+      'font-size': '90%',
+      'text-align': 'center',
+      'cursor': 'pointer',
+    }"
+  >
+    <h3>{{ nameAbility |uppercase }}</h3>
+  </div>
+  <div [@animate]="animationState" class="container">
+    <div class="content" *ngIf="state">
+      <span>{{ descriptionAbility }}</span>
+    </div>
+  </div>
+</div>

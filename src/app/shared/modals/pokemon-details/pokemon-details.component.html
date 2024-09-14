@@ -1,4 +1,10 @@
 <div class="content" mat-dialog-content>
+  <div class="content-img">
+    <shared-picture
+      [img]="this.imagePokemon()"
+      [alt]="data.name"
+    ></shared-picture>
+  </div>
   <div class="information">
     <h1>{{ data.name | uppercase }}</h1>
     <p>
@@ -40,54 +46,15 @@
     <ul>
       <li
         *ngFor="let ability of data.abilities"
-        [ngStyle]="{
-          width: 'auto',
-          'background-color': getAbilityColor(ability.ability.name),
-          'border-radius': '0.5rem',
-          padding: '0.5rem',
-          'margin-top': '0.3rem',
-          'font-weight': 'bold',
-          'text-align': 'center'
-        }"
       >
-        {{ ability.ability.name | uppercase }}
-        <!-- <span>
-          {{ this.abilityDescription.effect_entries[1].effect ?? '' }}
-        </span> -->
+        <shared-btn-slash [nameAbility]="ability.ability.name" ></shared-btn-slash>
       </li>
-
     </ul>
   </div>
   <div class="stats">
-    <shared-graphic-meter
-      [progress]="this.data.stats[0].base_stat"
-      [text]="this.data.stats[0].stat.name"
-    ></shared-graphic-meter>
-    <shared-graphic-meter
-      [progress]="this.data.stats[1].base_stat"
-      [text]="this.data.stats[1].stat.name"
-    ></shared-graphic-meter>
-    <shared-graphic-meter
-      [progress]="this.data.stats[2].base_stat"
-      [text]="this.data.stats[2].stat.name"
-    ></shared-graphic-meter>
-    <shared-graphic-meter
-      [progress]="this.data.stats[3].base_stat"
-      [text]="this.data.stats[3].stat.name"
-    ></shared-graphic-meter>
-    <shared-graphic-meter
-      [progress]="this.data.stats[4].base_stat"
-      [text]="this.data.stats[4].stat.name"
-    ></shared-graphic-meter>
-    <shared-graphic-meter
-      [progress]="this.data.stats[5].base_stat"
-      [text]="this.data.stats[5].stat.name"
-    ></shared-graphic-meter>
-  </div>
-  <div class="content-img">
-    <shared-picture
-      [img]="this.imagePokemon()"
-      [alt]="data.name"
-    ></shared-picture>
+    <ng-container *ngFor="let stat of this.data.stats">
+      <shared-graphic-meter [progress]="stat.base_stat" [text]="stat.stat.name">
+      </shared-graphic-meter>
+    </ng-container>
   </div>
 </div>

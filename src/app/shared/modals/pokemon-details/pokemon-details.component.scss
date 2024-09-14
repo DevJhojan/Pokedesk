@@ -5,7 +5,7 @@ h3 {
   margin-top: 1rem;
 }
 .content {
-  width: 100%;
+  width: 98.5%;
   height: 30rem;
   display: flex;
   padding: 0.5rem;
@@ -15,7 +15,6 @@ h3 {
   background-image: var(--bgImg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-attachment: fixed;
   overflow: hidden scroll;
   scrollbar-width: none;
   .information {
@@ -50,11 +49,17 @@ h3 {
       width: 100%;
     }
   }
+  &::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+  }
 }
 
 li {
   color: var(--text);
   list-style: none;
+  span {
+    color: var(--text);
+  }
 }
 p {
   color: var(--text);

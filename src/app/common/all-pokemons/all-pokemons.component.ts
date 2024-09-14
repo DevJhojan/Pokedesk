@@ -45,7 +45,6 @@ export class AllPokemonsComponent {
   }
 
   filterPokemons(): void {
-    console.log(this.allPokemonsModel)
     if (this.searchText) {
       const searchLower = this.searchText.toLowerCase();
       this.filteredPokemons = this.allPokemonsModel.filter((pokemon) =>
@@ -61,7 +60,8 @@ export class AllPokemonsComponent {
 
   openModal(pokemon: IPokemonModel){
     this.dialog.open(PokemonDetailsComponent,{
-      width: '90%',
+      width: '95%',
+      height: 'auto',
       data: pokemon
     })
   }
