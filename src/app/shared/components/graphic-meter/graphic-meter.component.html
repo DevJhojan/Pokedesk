@@ -1,9 +1,38 @@
 <div class="content">
   <div class="progress-container">
-    <div class="progress-bar" [style.width.%]="progress"></div>
-    <span class="progress-value">{{text | uppercase}}:{{ progress }} </span>
+    <div
+      [ngStyle]="{
+        'position': 'relative',
+        'width': adjustedProgress + '%',
+        'max-width': maxWidth + '%',
+        'height': '100%',
+        'background-color': 'var(--bgHP)',
+        'transition': 'width 0.25s ease-in-out'
+      }"
+    >
+      <span [ngStyle]="{
+          'position': 'absolute',
+          'top': '25%',
+          'left': this.calcultateLeft() + '%',
+          'width': maxWidth + '%',
+          'height': 'auto',
+          'display': 'flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'font-size': '90%',
+          'padding': '1px',
+          'color': 'var(--text)',
+          'font-weight': 'bold',
+          'pointer-events': 'none',
+          'z-index': '1'
+        }"
+      >
+        {{text | uppercase}}:{{ progress }}/{{maxWidthValue}}
+      </span>
+    </div>
   </div>
 </div>
+
 
 
 

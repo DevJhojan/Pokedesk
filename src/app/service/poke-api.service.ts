@@ -21,4 +21,7 @@ export class PokeApiService {
   getAbility(ability: string):Observable<any>{
     return this._httpClient.get<any>(`${environment.urlAbilities}${ability}`);
   }
+  getEspecie(namePokemon: string):Observable<any>{
+    return this._httpClient.get<any>(`${environment.urlEspecies}${namePokemon}`)
+  }
 }

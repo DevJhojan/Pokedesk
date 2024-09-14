@@ -39,14 +39,34 @@ h3 {
       width: 95%;
     }
   }
-  .content-img {
-    box-shadow: var(--shadowStart);
-    border-radius: 30%;
-    overflow: hidden;
-    width: 15rem;
-    height: 15rem;
-    shared-picture {
-      width: 100%;
+  .container-pokemon{
+    width: 18rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    .content-img {
+      box-shadow: var(--shadowStart);
+      border-radius: 30%;
+      overflow: hidden;
+      width: 95%;
+      height: 15rem;
+      shared-picture {
+        width: 100%;
+      }
+    }
+    .descriptionPokemon{
+      width: 95%;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 1rem;
+      box-shadow: var(--shadowStart);
+      text-shadow: var(--shadowEnd);
+      font-weight: bold;
+      border-radius: 30%;
+      overflow: hidden;
+      color: var(--text);
     }
   }
   &::-webkit-scrollbar {

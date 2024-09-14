@@ -31,12 +31,10 @@ export class BtnSlashComponent {
 
   getDescriptionHability() {
     this.pokeApiService.getAbility(this.nameAbility).subscribe((ability: any) => {
-        console.log(ability)
         for(let effect_entry of ability.effect_entries)
         {
             if(effect_entry.language.name == "en")
               this.descriptionAbility = effect_entry.effect;
-              console.log(this.descriptionAbility)
         }
     });
   }

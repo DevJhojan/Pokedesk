@@ -1,18 +1,21 @@
 <div class="content" mat-dialog-content>
-  <div class="content-img">
-    <shared-picture
-      [img]="this.imagePokemon()"
-      [alt]="data.name"
-    ></shared-picture>
-  </div>
+   <div class="container-pokemon">
+     <div class="content-img">
+       <shared-picture
+         [img]="this.imagePokemon()"
+         [alt]="data.name"
+       ></shared-picture>
+     </div>
+     <p class="descriptionPokemon">
+        {{this.descriptionPokemon | uppercase}}
+     </p>
+   </div>
   <div class="information">
     <h1>{{ data.name | uppercase }}</h1>
     <p>
       <strong>Base Experience:</strong>
-      <shared-graphic-meter
-        [progress]="this.data.base_experience"
-        [text]="'EXP'"
-      ></shared-graphic-meter>
+      <shared-graphic-meter [progress]="data.base_experience" [text]="'exp'">
+      </shared-graphic-meter>
     </p>
     <h3>Types:</h3>
     <ul
