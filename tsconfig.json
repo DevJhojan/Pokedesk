@@ -19,34 +19,17 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
+    "lib": ["ES2022", "dom"],
     "paths": {
-      "@models/*":[
-        "src/app/Models"
-      ],
-      "@layouts/*":[
-        "src/app/layouts"
-      ],
-      "@services/*":[
-        "src/app/Service"
-      ],
-      "@share/*":[
-        "src/app/shared"
-      ],
-      "@assets/*":[
-        "src/assets"
-      ],
-      "@func/*":[
-        "src/assets/func"
-      ]
+      "@models/*": ["src/app/models"],
+      "@layouts/*": ["src/app/layouts"],
+      "@services/*": ["src/app/services"],
+      "@shared/*": ["src/app/shared"],
+      "@assets/*": ["src/assets"],
+      "@data/*": ["src/app/data"]
     }
   },
-  "types": [
-    "d3"
-  ],
+  "types": ["d3"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

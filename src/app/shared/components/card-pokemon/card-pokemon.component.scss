@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/index.scss";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css");
+.container{
+  width: 15rem;
+  height: 8rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: var(--shadowStart);
+  border-radius: 1rem;
+  background-color: var(--bgCard);
+  .content-img{
+    box-shadow: var(--shadowStart);
+    border-radius: 30%;
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+    shared-picture{
+      width: 100%;
+    }
+  }
+  .content-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    span{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      color: var(--text);
+    }
+
+  }
+  h3{
+    color: var(--title);
+  }
+
+}
+
+p{
+  text-align: center;
+}
+.types{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}

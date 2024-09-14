@@ -1,3 +1,5 @@
+import { IOtherModel } from "./i-other.model";
+
 export interface ISpritesModel{
   back_default: string;
   back_female: any;
@@ -7,6 +9,6 @@ export interface ISpritesModel{
   front_female: any;
   front_shiny: string;
   front_shiny_female: any;
-  other: any;
+  other?: IOtherModel;
   version: any;
 }

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="content-img">
+    <shared-picture
+      [img]="this.imagePokemon()"
+      [alt]="this.pokemon?.name ?? ''"
+    />
+  </div>
+  <div class="content-info">
+    <span>#{{this.pokemon?.id}}</span>
+    <h3>{{this.pokemon?.name | uppercase}} </h3>
+    <shared-graphic-meter
+      [progress]="this.pokemon?.base_experience??0"
+      [text]="'EXp'"
+      >
+    </shared-graphic-meter>
+    <span *ngIf="!this.image">pokemon no encontrado</span>
+  </div>
+  <div class="types">
+    <p
+      *ngFor="let type of this.pokemon?.types"
+      [ngStyle]="{
+        'width': '5rem',
+        'background-color': getTypeColor(type.type.name),
+        'color': 'var(--text)',
+        'border-radius': '5px',
+        'padding': '2px',
+        'font-weight': 'bold',
+      }"
+      >
+      {{type.type.name | uppercase }}
+    </p>
+  </div>
+</div>

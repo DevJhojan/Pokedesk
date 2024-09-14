@@ -18,8 +18,8 @@ export interface IPokemonModel{
   moves: IMovesModel[];
   name: string;
   past_types: any[];
-  species: IEntityModel[];
-  sprites: ISpritesModel;
+  species?: IEntityModel[];
+  sprites?: ISpritesModel;
   stats: IStatModel[];
   types: ITypeModel[];
   wight: number;

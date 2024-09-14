@@ -1,0 +1,13 @@
+<img
+  [src]="img"
+  [alt]="alt"
+  (load)="onLoad()"
+  [ngStyle]="{display: hasLoaded ? '': 'none'}"
+  />
+
+<img
+  *ngIf="!hasLoaded"
+  src="assets/img/load.svg"
+  alt="load"
+  />
+

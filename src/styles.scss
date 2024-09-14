@@ -3,7 +3,7 @@
 
 @use "@angular/material" as mat;
 
-@import "./assets/styles/theme-dark/index.scss";
+@import "./assets/styles/index.scss";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -41,9 +41,8 @@ $pokedesk-v2-theme: mat.define-light-theme(
 
 * {
   margin: 0;
-  padding: 1%;
+  padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: black;
   color: white;
   scroll-behavior: smooth;
 }
