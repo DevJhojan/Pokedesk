@@ -29,10 +29,10 @@ export class GraphicMeterComponent implements OnChanges {
   }
 
   calcultateLeft(): number{
-    if(this.progress < 49) return 40;
-    if(this.progress < 99) return  25;
-    if(this.progress < 199) return -40;
-    if(this.progress < 299) return -98;
+    if(this.progress < 50) return 35;
+    if(this.progress < 99) return  20;
+    if(this.progress < 199) return -35;
+    if(this.progress < 299) return -95;
     else return 0;
   }
   calculateMaxWidth():number{
