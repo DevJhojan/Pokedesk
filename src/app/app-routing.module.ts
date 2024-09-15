@@ -6,11 +6,11 @@ import { AllPokemonsComponent } from './common/all-pokemons/all-pokemons.compone
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pokedesk',
+    redirectTo: 'Pokedesk',
     pathMatch: 'full',
   },
   {
-    path: 'pokedesk',
+    path: 'Pokedesk',
     title: 'Busca tu Pokemon',
     component: AllPokemonsComponent
   },
