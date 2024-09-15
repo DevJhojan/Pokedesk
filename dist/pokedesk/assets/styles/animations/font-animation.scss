@@ -1,0 +1,40 @@
+
+@keyframes title-animation {
+  0% {
+    font-size: 150%;
+  }
+  50% {
+    font-size: 200%;
+  }
+  100% {
+    font-size: 150%;
+  }
+}
+@keyframes subtitle-animation {
+  0% {
+    font-size: 100%;
+  }
+  50% {
+    font-size: 150%;
+  }
+  100% {
+    font-size: 100%;
+  }
+}
+@keyframes text-position {
+  0%{
+    text-align: left;
+  }
+  25%{
+    text-align: center;
+  }
+  50%{
+    text-align: right;
+  }
+  80%{
+    text-align: center;
+  }
+  100%{
+    text-align: left;
+  }
+}
