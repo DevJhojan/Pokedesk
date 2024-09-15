@@ -36,7 +36,7 @@ export class GraphicMeterComponent implements OnChanges {
   calcultateLeft(): number{
     if(this.progress < 50) return 45;
     if(this.progress < 99) return  20;
-    if(this.progress < 199) return -35;
+    if(this.progress < 199) return -30;
     if(this.progress < 299) return -90;
     else return 0;
   }
