@@ -7,6 +7,8 @@
        ></shared-picture>
      </div>
      <p class="descriptionPokemon">
+        SPECIES: {{this.data.species?.name ?? '' | uppercase}}
+        <br>
         {{this.descriptionPokemon | uppercase}}
      </p>
    </div>
