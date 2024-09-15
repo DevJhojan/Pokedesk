@@ -4,6 +4,7 @@
       [img]="this.imagePokemon()"
       [alt]="this.pokemon?.name ?? ''"
     />
+    <span *ngIf="!this.image">pokemon Sin imagen</span>
   </div>
   <div class="content-info">
     <span>#{{this.pokemon?.id}}</span>
@@ -13,7 +14,6 @@
       [text]="'EXp'"
       >
     </shared-graphic-meter>
-    <span *ngIf="!this.image">pokemon no encontrado</span>
   </div>
   <div class="types">
     <p

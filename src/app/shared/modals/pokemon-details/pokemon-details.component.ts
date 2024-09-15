@@ -15,7 +15,7 @@ export class PokemonDetailsComponent {
   ability?: any;
   descriptionShow: string = '';
   abilityDescriptions: { [key: string]: string } = {};
-  descriptionPokemon:  string = '';
+  descriptionPokemon: string = '';
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: IPokemonModel,
@@ -23,17 +23,14 @@ export class PokemonDetailsComponent {
   ) {
     this.getDescriptionPokemon();
   }
-  getDescriptionPokemon(){
-    this.pokeApiService.getEspecie(this.data.name)
-    .subscribe((especie: any)=>{
-        for(let flavor_text_entry of especie.flavor_text_entries){
-          if(flavor_text_entry.language.name == 'en'){
-            this.descriptionPokemon = flavor_text_entry.flavor_text;
-            console.log(flavor_text_entry.flavor_text)
-          }
-
+  getDescriptionPokemon() {
+    this.pokeApiService.getEspecie(this.data.species?.name ?? '').subscribe((especie: any) => {
+      for (let flavor_text_entry of especie.flavor_text_entries) {
+        if (flavor_text_entry.language.name == 'en') {
+          this.descriptionPokemon = flavor_text_entry.flavor_text;
         }
-    })
+      }
+    });
   }
   imagePokemon(): string {
     let caseImage: number = 0;

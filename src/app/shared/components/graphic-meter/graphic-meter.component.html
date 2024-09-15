@@ -10,7 +10,7 @@
         'max-width': maxWidth + '%',
         'height': '100%',
         'background-color': 'var(--bgHP)',
-        'transition': 'width 0.25s ease-in-out'
+        'transition': 'width 0.25s ease-in-out',
       }"
     >
       <span [ngStyle]="{
@@ -21,16 +21,16 @@
           'height': 'auto',
           'display': 'flex',
           'align-items': 'center',
-          'justify-content': 'center',
+          'justify-content': 'space-around',
           'font-size': '90%',
           'padding': '1px',
           'color': 'var(--text)',
           'font-weight': 'bold',
           'pointer-events': 'none',
-          'z-index': '1'
+          'z-index': '1',
         }"
       >
-        {{ progress }}/{{maxWidthValue}}
+        {{ progressString }}/{{maxWidthValue}}
       </span>
     </div>
   </div>
