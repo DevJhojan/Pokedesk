@@ -14,4 +14,11 @@
 .content{
   display: flex;
   flex-direction: column;
+  .text{
+    font-size: 90%;
+    font-weight: bold;
+    padding: 1px;
+    background-color: var(--bgCard);
+    color: var(--text)
+  }
 }

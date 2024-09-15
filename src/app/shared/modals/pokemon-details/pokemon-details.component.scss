@@ -33,6 +33,10 @@ h3 {
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bgCard);
+    box-shadow: var(--shadowStart);
     flex-wrap: nowrap;
     justify-content: space-around;
     shared-graphic-meter {

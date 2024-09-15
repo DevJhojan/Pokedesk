@@ -1,4 +1,7 @@
 <div class="content">
+  <span class="text">
+    {{text | uppercase}}:
+  </span>
   <div class="progress-container">
     <div
       [ngStyle]="{
@@ -27,7 +30,7 @@
           'z-index': '1'
         }"
       >
-        {{text | uppercase}}:{{ progress }}/{{maxWidthValue}}
+        {{ progress }}/{{maxWidthValue}}
       </span>
     </div>
   </div>
